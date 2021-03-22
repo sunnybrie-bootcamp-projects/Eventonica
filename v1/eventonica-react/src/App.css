@@ -1,0 +1,376 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+/* -- GENERAL STYLING --*/
+
+/* PAGE SCROLLBAR */
+body::-webkit-scrollbar {
+    width: 1em;
+
+    background-color: #262626;
+}
+ 
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+    border-radius: 1rem 1rem 1rem;
+
+    background-color: rgba(44, 241, 204, .4);
+}
+
+body {
+    background: linear-gradient(to bottom, rgba(32, 36, 38, .75), rgba(32, 36, 38, .85)), url("graphics/cityscape.jpeg") no-repeat center fixed;
+    background-attachment: fixed;
+    background-size: cover, cover;
+    background-blend-mode: normal;
+    
+    font-family: 'Lato', sans-serif;
+}
+
+#currentUser {
+    display: block;
+    position: absolute;
+    right: 0em;
+    top: 0em;
+    
+    text-align: center;
+}
+
+img.loggedInAvatar {
+    max-height: 50%;
+    max-width: 50%;
+}
+
+.navUser{
+    padding: 0em;
+    margin: .125rem;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    
+    color: #F2884B;
+    text-shadow: 0rem 0rem .25rem rgba(32, 36, 38, 1);
+}
+
+header {
+    max-width: 90%;
+    margin: auto;
+    
+}
+
+main {
+    
+}
+
+h1 {
+    
+    color: #fbbf62;
+    filter: drop-shadow(0rem 0rem .25rem #F2884B);
+
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    font-size: 6rem;
+}
+
+h2{ 
+    color: #32d5db;
+    
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+h3 {
+    padding: 0rem 1rem;
+    
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      #F2884B, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
+
+h3,
+label{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    
+    color: #F2884B;
+    text-shadow: 0rem 0rem .25rem rgba(32, 36, 38, 1);
+}
+
+h4 {
+    color: #32d5db;
+}
+
+p{
+    color: #2cf1cc;
+}
+
+/* PARAGRAPH SCROLLBARS */
+
+p::-webkit-scrollbar {
+    width: .25rem;
+    margin-right: 1rem;
+
+    background-image: linear-gradient(
+      to bottom, 
+      #2cf1cc, 
+      rgba(0, 0, 0, 0) 100%);
+}
+ 
+p::-webkit-scrollbar-track {
+    /*background: linear-gradient(
+      to bottom, 
+      #2cf1cc, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%);*/
+}
+ 
+p::-webkit-scrollbar-thumb {
+    border-radius: 1rem 1rem 1rem;
+
+    background-color: rgba(44, 241, 204, .4);
+    border-style: solid;
+    border-width: .0625rem;
+    border-color: rgba(44, 241, 204, 1);
+    box-shadow: inset 0rem 0rem .25rem rgba(26, 26, 26, .5);
+}
+
+/* BOARD */
+.tableTitle{
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 95%;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    
+    background: linear-gradient(to bottom, rgba(54, 54, 54, 0.8) 0%, rgba(26, 26, 26, .9) 25%, rgba(26, 26, 26, .9) 75%, rgba(54, 54, 54, .125) 150%), linear-gradient(#F2884B 15%, #1FA9DB, #F2884B);
+    background-blend-mode: normal, normal;
+    text-shadow: .3rem .3rem .35rem rgba( 186, 245, 255, .25);
+    filter: drop-shadow(0rem 0rem .125rem #000);
+    
+    text-align: center;
+}
+
+table {
+    display: table;
+    width: 95%;
+    margin: auto;
+    padding: 1.5rem;
+    padding-top: 0rem;
+    
+    border-collapse: separate;
+    border-spacing: 1rem 1.75rem;
+    
+    background-color: rgba(186, 245, 255, .125);
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 3rem rgba(186, 245, 255, .25);
+    
+}
+
+thead {
+    position: relative;
+    top: -5%;
+    
+}
+
+th {
+    margin: auto;
+    
+}
+
+tbody {
+   
+}
+
+tbody tr {
+    
+}
+
+td {
+    padding: .25rem;
+    
+    border: .25rem outset;
+    border-color: rgba(186, 245, 255, .25);
+    
+    background-image: linear-gradient(145deg, rgba(186, 245, 255, .125), rgba(39, 107, 140, .125));
+    box-shadow: inset 0 0 .5rem rgba(39, 107, 140, .5);
+     
+   filter: drop-shadow(.5rem .5rem .25rem rgba(186, 245, 255, .25)); 
+    
+}
+
+img.notFave,
+img.Fave {
+    display: block;
+    max-width: 90%;
+    margin: auto;
+}
+
+/* Table Dates */
+td.category,
+td.date {
+    text-align: center;
+}
+
+h4.eventDay {
+    font-style: oblique;
+    
+}
+
+h4.eventDate {
+    font-size: 2em;
+}
+
+h4.eventDate,
+h4.eventDay,
+h4.eventMonth,
+h4.eventYear {
+    margin: auto;
+    text-align: center;
+}
+
+/* Event Info */
+
+
+h4.eventName{
+    color: #32d5db;
+    
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.eventDescription {
+    max-height: 5rem;
+    padding: 0rem .5rem;
+    
+    overflow-y: auto;
+    
+    border-left-width: .25rem;
+    border-left-style: solid;
+    border-image: 
+    linear-gradient(
+      to bottom, 
+      #2cf1cc, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
+
+.category{
+    color: #2cf1cc;
+}
+
+/*Users Table Specs*/
+.userid {
+    color: #2cf1cc; 
+    
+    text-align: center;
+}
+
+ul.listOfFaves {
+    list-style: '♡' outside;
+    color: #2cf1cc;
+    
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.listOfFaves li {
+    padding: .125rem .75rem;
+}
+
+/*ADD EVENT FORM*/
+.tableTitle button{
+    padding: 0rem;
+    
+    background: none;
+    
+    font: inherit;
+    text-shadow: inherit;
+    
+    border-style: none;
+    border-bottom: .0625rem dashed;
+}
+
+form {
+    display: block;
+    box-sizing: border-box;
+    width: 95%;
+    margin: auto;
+    padding: 1rem;
+    
+    grid-template-columns: 35% auto auto;
+    grid-template-rows: auto auto;
+    
+    
+    background-color: rgba(186, 245, 255, .125);
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 3rem rgba(186, 245, 255, .25);
+}
+
+
+label {
+    grid-column: 1;
+    
+    text-align: right;
+}
+
+input,
+textarea{
+    margin: auto auto auto 1rem;
+    grid-column: 2 / span 2;
+    
+    background-color: #262626;
+    color: #2cf1cc;
+}
+
+button {
+    padding: .25rem 1rem;
+    margin: .75rem auto;
+    grid-column: 1 / span 3;
+    
+    color: #32d5db; background-color: #262626;
+    
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
