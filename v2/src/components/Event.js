@@ -1,8 +1,9 @@
 import React from "react";
-//import favorite from "../graphics/favorite.png";
+import favoriteHeart from "../graphics/favorite.png";
+import notfaveHeart from "../graphics/notfavorite.png";
 
 function Event(props){
-
+  
     return (
       <tr className="eventListItem">
         {/* Event Date */}
@@ -21,12 +22,16 @@ function Event(props){
           {props.eventCategory}
         </td>
 
-        {/* Fave Status 
-            
-            <td className="fave" headers="th-fave">
-                <img src=`{favorite}` className="Fave" />
-            </td>
-*/}
+        {/* Fave Status */}
+        { props.fave ? (
+          <td className="fave" headers="th-fave">
+            <img src={favoriteHeart} className="Fave" />
+          </td>
+        ) : (
+          <td className="fave" headers="th-fave">
+            <img src={notfaveHeart} className="Fave" />
+          </td>
+        )}
       </tr>
     );
 }

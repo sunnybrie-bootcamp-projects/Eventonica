@@ -32,7 +32,7 @@ app.post("/events", async (req, res) => {
 app.get('/events', async ( req, res ) => {
     try {
         const events = await db.any('SELECT * FROM events ORDER BY event_date;', [true]);
-        console.log({ events });
+        //console.log({ events });
         res.json( events );
     }
     catch(e) {
