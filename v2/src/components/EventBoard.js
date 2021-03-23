@@ -73,7 +73,7 @@ function EventBoard(props) {
             </tbody>
           }
         </table>
-        <EventAddForm fetchData={fetchData}/>
+        <EventAddForm fetchData={() => fetchData}/>
       </>
     );
   
